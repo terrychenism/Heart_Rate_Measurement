@@ -303,3 +303,8 @@ pks = max(psdx);
 pks = log10(pks);
 heartrate = 60*pks;
 fprintf('Your heart rate is %.f',heartrate);
+
+%%%% write data%%%%%
+fileID = fopen('exp.txt','w');
+fprintf(fileID,'%.f',heartrate);
+fclose(fileID);
